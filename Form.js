@@ -9,13 +9,13 @@ class Form {
 
         this.welcomeForm = createElement('h2');
         this.QuestionFirst = createElement('h3');
-        this.Opt_Que_First = createElement('input');
+        this.Opt_Que_First = createInput('Yes/No');
         this.answer = createElement('label');
         this.QuestionSecond = createElement('h3');
         this.Opt_Que_Second = createInput('Yes/No');
         this.answerSecond = createElement('label');
         this.QuestionThird = createElement('h3');
-        this.Opt_Que_Third = createInput('Yes/No');
+        this.Opt_Que_Third = createInput('100/500/1000/More');
         this.answerThird = createElement('label');
         this.optional = createElement('h4');
         this.optionalInput = createElement('textarea');
