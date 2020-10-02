@@ -2,7 +2,6 @@ class Person {
     constructor(){
         this.name = null;
         this.email = null;
-        this.password = null;
         this.answers = null;
     }
 
@@ -17,8 +16,7 @@ class Person {
         var Person = "Person/person"+PersonCount;
         database.ref(Person).set({
             name: this.name,
-            email: this.email,
-            password: this.password
+            email: this.email
         })
     }
 

@@ -3,7 +3,6 @@ class Form {
         
         this.name = createInput().attribute("placeholder", "Your Name");
         this.email = createInput().attribute("placeholder", "Email");
-        this.password = createInput().attribute("placeholder", "Create Password");
         this.logButton = createButton("Log In");
         this.Logtitle = createElement('h1');
 
@@ -46,14 +45,12 @@ class Form {
         this.Logtitle.position(displayWidth / 2 - 170, 0);
         this.name.position(displayWidth / 2 - 50, displayHeight / 2 - 150);
         this.email.position(displayWidth / 2 - 50, displayHeight / 2 - 120);
-        this.password.position(displayWidth / 2 -50, displayHeight / 2 - 90);
         this.logButton.position(displayWidth / 2 -50, displayHeight / 2 - 50);
         person.getCount();
         this.logButton.mousePressed(() => {
             this.hide();
             person.name = this.name.value();
             person.email = this.email.value();
-            person.password = this.password.value();
             
             
             console.log(PersonCount);
