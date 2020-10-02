@@ -1,24 +1,33 @@
 class Form {
     constructor(){
         
-        this.name = createInput("Name");
-        this.email = createInput("Email");
-        this.password = createInput("Password");
+        this.name = createInput().attribute("placeholder", "Your Name");
+        this.email = createInput().attribute("placeholder", "Email");
+        this.password = createInput().attribute("placehloder", "Create Password");
         this.logButton = createButton("Log In");
         this.Logtitle = createElement('h1');
 
         this.welcomeForm = createElement('h2');
         this.QuestionFirst = createElement('h3');
-        this.Opt_Que_First = createInput('Yes/No');
-        this.answer = createElement('label');
+        this.Opt_Que_First = createRadio("Option");
+        this.Opt_Que_First.option("Yes");
+        this.Opt_Que_First.option("No");
+        this.answer = createElement('label', 1);
         this.QuestionSecond = createElement('h3');
-        this.Opt_Que_Second = createInput('Yes/No');
+        this.Opt_Que_Second = createRadio();
+        this.Opt_Que_Second.option("Yes");
+        this.Opt_Que_Second.option("No");
         this.answerSecond = createElement('label');
         this.QuestionThird = createElement('h3');
-        this.Opt_Que_Third = createInput('100/500/1000/More');
+        this.Opt_Que_Third = createRadio();
+        this.Opt_Que_Third.option("100");
+        this.Opt_Que_Third.option("500");
+        this.Opt_Que_Third.option("1000");
+        this.Opt_Que_Third.option("More");
         this.answerThird = createElement('label');
         this.optional = createElement('h4');
         this.optionalInput = createElement('textarea');
+        this.optionalInput.style("width: 50%; height: 35%;")
         this.submit = createButton("Submit");
     }
 
@@ -57,6 +66,7 @@ class Form {
             person.getPersonInfo();
             person.update();
         })
+        console.log(displayWidth);
         /*!(this.logButton.mousePressed(() => {
         this.welcomeForm.hide();
         this.QuestionFirst.hide();
@@ -77,7 +87,7 @@ class Form {
             image(secondImage, 0, 0, displayWidth, displayHeight);
             this.welcomeForm.html("Select options accroding to your answer.");
             this.QuestionFirst.html('Q1. Do you think we need to have free lunch meals in our school canteen for the kids who are very poor?');
-            this.Opt_Que_First.html('Yes/No');
+            //this.Opt_Que_First.html('Yes/No');
             this.answer.html('Answer');
             this.QuestionSecond.html("Q2. Would you be willing to contribute a small amount every month for such a program?");
             this.answerSecond.html('Answer');
@@ -85,6 +95,7 @@ class Form {
             this.answerThird.html('Answer');
             this.optional.html("Write other questions on which you want to take survey. Also your feedback about this survey.");
             //this.Opt_Que_First.value("Yes");
+            
             this.welcomeForm.position(displayWidth / 2 - 230, 0);
             this.QuestionFirst.position(displayWidth / 2 - 500, 80);
             this.answer.position(displayWidth / 8, 150);
