@@ -26,14 +26,13 @@ class Form {
         this.answerThird = createElement('label');
         this.optional = createElement('h4');
         this.optionalInput = createElement('textarea');
-        this.optionalInput.style("width: 50%; height: 35%;")
+        this.optionalInput.style("width: 50%; height: 20%;")
         this.submit = createButton("Submit");
     }
 
     hide(){
         this.name.hide();
         this.email.hide();
-        this.password.hide();
         this.logButton.hide();
         this.Logtitle.hide();
     }
@@ -44,7 +43,7 @@ class Form {
         this.Logtitle.style = "background-color:blue";
         this.Logtitle.position(displayWidth / 2 - 170, 0);
         this.name.position(displayWidth / 2 - 50, displayHeight / 2 - 150);
-        this.email.position(displayWidth / 2 - 50, displayHeight / 2 - 120);
+        this.email.position(displayWidth / 2 - 50, displayHeight / 2 - 100);
         this.logButton.position(displayWidth / 2 -50, displayHeight / 2 - 50);
         person.getCount();
         this.logButton.mousePressed(() => {
@@ -105,7 +104,7 @@ class Form {
             this.Opt_Que_Third.position(displayWidth / 2 - 500, 450);
             this.optional.position(displayWidth / 2 - 500, 520);
             this.optionalInput.position(displayWidth / 2 - 500, 580);
-            this.submit.position(displayWidth / 2, 650);
+            this.submit.position(displayWidth / 3, 800);
             this.submit.mousePressed(()=> {
                 console.log(this.Opt_Que_First.value());
                 answers.push(this.Opt_Que_First.value(), this.Opt_Que_Second.value(), this.Opt_Que_Third.value(), this.optionalInput.value());
