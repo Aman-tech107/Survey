@@ -3,7 +3,7 @@ class Form {
         
         this.name = createInput().attribute("placeholder", "Your Name");
         this.email = createInput().attribute("placeholder", "Email");
-        this.password = createInput().attribute("placehloder", "Create Password");
+        this.password = createInput().attribute("placeholder", "Create Password");
         this.logButton = createButton("Log In");
         this.Logtitle = createElement('h1');
 
